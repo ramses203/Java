@@ -13,8 +13,14 @@ public class TestLambda {
 			PrintString lambdaStr = s -> System.out.println(s);
 			lambdaStr.showString("hello lambda_1");
 			PrintMyString(lambdaStr);
+		
+			PrintString reStr = returnString();
+			reStr.showString("hello ");
 			
 		}
+		
+		
+		
 		
 		public static void PrintMyString(PrintString p) {
 			p.showString("hello lambda_2");
@@ -22,4 +28,8 @@ public class TestLambda {
 		}
 	
 	
+		public static PrintString returnString(){
+			return s -> System.out.println(s + "world");
+			
+		}
 }
